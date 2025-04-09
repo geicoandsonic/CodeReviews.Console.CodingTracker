@@ -5,7 +5,7 @@ namespace CodingTracker
     //This class is responsible for handling all the user input and for passing the data to the validator
     public static class UserInputManager
     {
-        internal static bool isTimerOn = false;
+        internal static bool isTimerOn;
         public static void Menu()
         {
             string? menuChoice;

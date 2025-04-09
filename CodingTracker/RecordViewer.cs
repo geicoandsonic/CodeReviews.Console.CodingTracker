@@ -1,6 +1,5 @@
 ﻿using CodingTracker.UILayer;
 using Microsoft.Data.Sqlite;
-using System.Configuration;
 using System.Globalization;
 
 //This class is responsible for displaying the records to the user.
@@ -8,8 +7,8 @@ namespace CodingTracker
 {
     public static class RecordViewer
     {
-        static string connectionString = ConfigurationManager.AppSettings.Get("ConnectionString");
-        static string databaseName = ConfigurationManager.AppSettings.Get("DatabaseName");
+        static string connectionString = System.Configuration.ConfigurationManager.AppSettings.Get("ConnectionString");
+        static string databaseName = System.Configuration.ConfigurationManager.AppSettings.Get("DatabaseName");
         public static bool ViewRecords(int specificRecord = -1, bool displayHeader = true)
         {          
             if (displayHeader)
