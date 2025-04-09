@@ -109,7 +109,7 @@ namespace CodingTracker
                 var tableCmd = connection.CreateCommand();
 
                 tableCmd.CommandText =
-                    $"DELETE {_databaseName}";
+                    $"DELETE FROM {_databaseName}";
 
                 tableCmd.ExecuteNonQuery();
 
